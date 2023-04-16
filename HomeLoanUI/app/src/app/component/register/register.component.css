@@ -1,0 +1,14 @@
+form{
+    width:500 px;
+    background:linear-gradient(to top,#edeaf3 50%, #3f3bb3 90%) no-repeat;
+}
+
+.container{
+    margin-top: 1px;
+    height:80vh;
+    width: 200vh;
+    display:flex;
+    justify-content: center;
+    align-items: top;
+}
+

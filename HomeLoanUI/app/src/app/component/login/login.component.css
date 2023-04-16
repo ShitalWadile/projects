@@ -1,0 +1,21 @@
+form{
+    
+    width:500px;
+    background:linear-gradient(to top,#edeaf3 50%, #3f3bb3 90%) no-repeat;
+}
+
+.container{
+    padding-top: 16vh;
+       margin: 2px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+}
+
+/* .outer{
+    height:100vh;
+    background:linear-gradient(to top,#63489e 50%, #bdbec4 90%);
+} */
+
+
+

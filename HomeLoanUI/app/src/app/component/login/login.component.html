@@ -1,0 +1,64 @@
+<div class="outer">
+<div class="container">
+<form class="border p-3 rounded-3" [formGroup]="loginForm" (ngSubmit)="loginSubmited()">
+<div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3">Login</span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" 
+        formControlName="email">
+        <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.dirty|| Email.touched) ">
+            Email is Required
+        </div>
+        <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.dirty|| Email.touched)">
+            Email is Invalid
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col mb-3">
+        <label for="pwd" class="form-label">Password</label>
+        <input type="password" class="form-control" id="pwd" 
+        formControlName="pwd">
+    </div>
+    <div class="form-text text-danger" *ngIf="PWD.errors?.['required'] && (PWD.dirty || PWD.touched) ">
+        Password is Required
+    </div>
+    <div clss="form-text text-danger" *ngIf="PWD.errors?.['minlength'] || PWD.errors?.['maxlength'] && (PWD.dirty || PWD.touched) ">
+        Password should be at least 6 and at the max 15 characters long.
+    </div>
+</div>
+
+<div class="row">
+    <div class="col mb-3">
+        <label for="Role" class="form-label">Role</label>
+        <!-- <input type="role" class="drop-down" id="role" 
+        formControlName="role"> -->
+        <select name="role" id="role">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select>
+        <!-- <select>User</select> -->
+        </div>
+        </div>
+
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="d-grid">
+            <button type="submit"  class="btn btn-primary"><a router-link="/home">Submit</a></button>
+        </div>
+    </div>
+</div>
+
+<div class-="text-center pt-4 text-muted">Don't have account?<a id="forget" routerLink="/register">Register</a></div>
+
+</form>
+</div>
+</div>
